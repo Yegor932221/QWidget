@@ -5,10 +5,11 @@
 #include <QVBoxLayout>
 win::win()
 {
+QTextCodec::setCodecForLocale(QTextCodec::codecForName("UTF-8"));
 codec = QTextCodec::codecForName("Windows-1251");
-this->setWindowTitle(codec->toUnicode("Обработка событий"));
+this->setWindowTitle(QString::fromUtf8("Обработка событий"));
 area = new Area( this );
-btn = new QPushButton(codec->toUnicode("Завершить"),this );
+btn = new QPushButton(QString::fromUtf8("Завершить"),this );
 QVBoxLayout *layout = new QVBoxLayout(this);
 layout->addWidget(area);
 layout->addWidget(btn);
