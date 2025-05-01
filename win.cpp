@@ -1,5 +1,8 @@
 #include "win.h"
 #include <QValidator>
+#include <QHBoxLayout>
+#include <QVBoxLayout>
+#include <QTextCodec>
 
 Win::Win(QWidget *parent):QWidget(parent)
 {
@@ -18,7 +21,7 @@ Win::Win(QWidget *parent):QWidget(parent)
     layout2->addWidget(edit1);
     layout2->addWidget(edit2);
     QHBoxLayout *layout3 = new QHBoxLayout();
-    layout3->addWidget(culcbutton);
+    layout3->addWidget(calcbutton);
     layout3->addWidget(exitbutton);
     QVBoxLayout *layout4 = new QVBoxLayout(this);
     layout4->addLayout(layout1);

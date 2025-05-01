@@ -1,6 +1,11 @@
 #ifndef win_h
 #define win_h
-#include <QtGui>
+#include<QWidget>
+#include <QLineEdit>
+#include <QLabel>
+#include <QPushButton>
+#include <QTextCodec>
+
 class Counter:public QLineEdit
 {
     Q_OBJECT
