@@ -16,7 +16,7 @@ void Area::paintEvent(QPaintEvent *)
     QPainter painter(this);
     painter.setPen(Qt::red);
     myline->move(alpha,&painter);
-    myrect->move(alpha*(-0.5),&painter);
+    myrect->move(alpha*(-1),&painter);
 }
 void Area::timerEvent(QTimerEvent *event)
 {
@@ -26,8 +26,7 @@ void Area::timerEvent(QTimerEvent *event)
         update(); // обновить внешний вид
     }
     else
-        QWidget::timerEvent(event); // иначе передать для стандартной
-    // обработки
+        QWidget::timerEvent(event); // иначе передать для стандартной обработки
 }
 void Area::hideEvent(QHideEvent *)
 {
